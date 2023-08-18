@@ -12,7 +12,7 @@
 
 ## Overview
 
-This Python script calculates the last Saturday of a specified month and counts the total number of Saturdays using the `calendar` module. 
+This Python script calculates the last Saturday of a specified month and counts the total number of Saturdays using the `datetime` module. 
 
 ## Usage
 
@@ -21,16 +21,14 @@ This Python script calculates the last Saturday of a specified month and counts 
 2. **Clone the Repository:** Clone this repository or create a new Python file and paste the code.
 
 3. **Running the Script:** Run the `findingsaturday()` function to see the last Saturday of the specified month and the total number of Saturdays.
-```python
 
- monthcalendar(2023, 6)
-```
 ## Example
   For example, running the program with the provided input:
 
   ```bash
 
- monthcalendar(2023, 6)
+ Enter the year:2023
+ Enter the month:6
   
 
   ```
