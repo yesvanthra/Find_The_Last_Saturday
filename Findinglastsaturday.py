@@ -1,7 +1,11 @@
-from calendar import monthcalendar
+from datetime import datetime, timedelta
 def findingsaturday():
-    month = monthcalendar(2023, 6)
-    last_saturday = month[-1][5] or month[-2][5]
-    total_saturdays = sum(1 for week in month if week[5])
-    print(f"Last Saturday: {last_saturday}\nTotal Saturdays: {total_saturdays}")
+    year = int(input("Enter the year: "))
+    month = int(input("Enter the month: "))
+    last_day_of_month = datetime(year, month + 1, 1) - timedelta(days=1)
+    last_saturday = last_day_of_month - timedelta(days=(last_day_of_month.weekday() - 5) % 7)
+    total_saturdays = sum(
+        1 for day in range(1, last_day_of_month.day + 1) if (datetime(year, month, day).weekday() == 5))
+    print(f"Last Saturday: {last_saturday.strftime('%d')}")
+    print(f"Total Saturdays: {total_saturdays}")
 findingsaturday()
